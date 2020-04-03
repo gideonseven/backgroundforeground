@@ -76,6 +76,7 @@ class BaseApplication : Application(), Application.ActivityLifecycleCallbacks {
     }
 
     override fun onActivityStopped(activity: Activity) {
+        MySharedPreference.clearPreference(this)
     }
 
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
